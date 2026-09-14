@@ -1,26 +1,3 @@
-name: Compile Kernel Melt Rebase - POCO F4 GT (Ingres) - AOSP Android 13
-
-on:
-  workflow_dispatch:
-    inputs:
-      kernel_source:
-        description: "Kernel source repo URL for marble (Melt Kernel). Paste any git URL here to override the default."
-        required: true
-        type: string
-        default: "https://github.com/kingD2N/kernel_source_Melt_xiaomi_ingres"
-
-      kernel_branch:
-        description: "Branch on kernel_source above (independent from modules/devicetree branches below)"
-        required: true
-        type: choice
-        default: "melt-rebase-4LazyGoogle"
-        options:
-          - LazyGoogle_ORI
-          - melt-rebase-4LazyGoogle
-          - melt-MIX
-
-      modules_branch:
-        description: "Branch for the LineageOS modules repo (unaffected by kernel_source/kernel_branch above - currently defaults to lineage-23.2)"
         required: true
         type: string
         default: "lineage-23.2"
